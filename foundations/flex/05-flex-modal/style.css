@@ -20,6 +20,10 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 10px;
 }
 
 .icon {
@@ -33,9 +37,28 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
 }
 
-.close-button {
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .text {
+  font-size: 18px;
+  font-weight: bold;
+
+}
+
+/* Why we use display flex(as well as align-items and justify-content) here? Maybe someday I'll ask that question on github/discord.. */
+.header .close-button {
   background: #eee;
   border-radius: 50%;
   color: #888;
